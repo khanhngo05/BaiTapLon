@@ -28,9 +28,9 @@
 }
 
 .header__signin {
-    width: 80px;
+    width: 120px;
     height: 30px;
-    font-size: 2rem;
+    font-size: 3rem;
     background-color: transparent;
     border: none;
     border-right: 1px solid #000;
@@ -46,9 +46,9 @@
 }
   
 .header__login {
-    width: 120px;
+    width: 160px;
     height: 30px;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-left: 8px;
     background-color: transparent;
     border: none;
@@ -62,9 +62,7 @@
 
 
 /* Navbar */
-.header__navbar {
-    display: none;
-}
+
 
 .header__navbar-list {
     list-style: none;
@@ -463,7 +461,7 @@
     margin-right: 3px;
     outline: none;
     position: absolute;
-    right: 0%;
+    right: 8%;
 }
 
 .search-bar__btn:hover {

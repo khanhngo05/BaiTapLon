@@ -107,5 +107,5 @@ html{
 }
 
 .select-input__link:hover {
-    color: var(--primary-color);
+    color: var(--sub-color);
 }
