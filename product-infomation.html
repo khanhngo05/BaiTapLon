@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopPet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/product-infomation.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.7.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/fonts/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,0,0&icon_names=menu" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Coiny&family=Just+Me+Again+Down+Here&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app">
+        <div class="pay__overlay" id="pay__overlay">
+            <div class="pay">
+                <button onclick="showOverlay()" class = "cart__cancel">X</button>
+                <span class="pay__text">Chọn hình thức thanh toán</span>
+                <div class="row">
+                    <div class="col c-6 pay-item">
+                        <div class="pay-item__logo" style="background-image: url(https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-ZaloPay-Square.png);"></div>
+                        <span class="pay-item__name">ZALOPAY</span>
+                    </div>
+                    <div class="col c-6 pay-item">
+                        <div class="pay-item__logo--vietqr" style="background-image: url(https://i.gyazo.com/566d62fd25cf0867e0033fb1b9b47927.png);"></div>
+                        <span class="pay-item__name">VIETQR</span>
+                    </div>
+                    <div class="col c-6 pay-item">
+                        <div class="pay-item__logo" style="background-image: url(https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-MoMo-Circle.png);"></div>
+                        <span class="pay-item__name">MOMO</span>
+                    </div>
+                    <div class="col c-6 pay-item">
+                        <span class="pay-item__name">Thanh toán khi nhận hàng</span>
+                    </div>
+                </div>
+                <div class="confirm__btn-wrap">
+                    <button class="comfirm__btn">Xác nhận</button>
+                </div>
+            </div>
+        </div>
+        <!-- Begin: Header -->
+        <header class="header">
+            <div class="wrap">
+                <a class="header__logo" href="javascript:history.back()">
+                    <div class="header__logo-img" style="background-image: url(./assets/img/logo.png);"></div>
+                </a>
+                
+                <!-- Chưa đăng nhập -->
+                <!-- <div class="header__action">
+                    <a href="./signin.html" class="header__signin">Đăng ký</a>
+                    <a href="./login.html" class="header__login">Đăng nhập</a>
+                </div> -->
+
+                <!-- Đã đăng nhập -->
+                <div class="header__navbar">
+
+                    <ul class="header__navbar-list">
+
+                        <li class="header__navbar-item">
+                            <div class="header__store">
+                                <a class="header__navbar-icon-link" href="./seller.html">
+                                    <i class="header__navbar-icon fi fi-ts-marketplace-store"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="header__navbar-item">
+                            <div class="header__user">
+                                <a class="header__navbar-icon-link">
+                                    <i class="header__navbar-icon fi fi-ts-circle-user"></i>
+                                </a>
+                                <ul class="header__user-menu">
+                                    <li class="header__user-item">
+                                        <a href="./user-info.html">Thông tin cá nhân</a>
+                                    </li>
+                                    <li class="header__user-item">
+                                        <a href="./change-profile.html">Chỉnh sửa hồ sơ</a>
+                                    </li>
+                                    <li class="header__user-item">
+                                        <a href="./purchase-history.html">Lịch sử đơn hàng</a>
+                                    </li>
+                                    <li class="header__user-item header__user-item--separate">
+                                        <a href="./index.html">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="header__navbar-item">
+                            <div class="header__menu">
+                                <a class="header__navbar-icon-link">
+                                    <i class="header__navbar-icon fi fi-tr-bars-sort"></i>
+                                </a>
+                                <ul class="header__menu-list">
+                                    <li class="header__menu-item">
+                                        <a href="./create-seller-profile.html">Bắt đầu buôn bán</a>
+                                    </li>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- End: Header -->
+
+        <!-- Begin: Container -->
+        <div class="app__container">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col c-3 product-info__img" style="background-image: url(./assets/img/pet1.png);"></div>
+                    <table class="col c-9 product-info__table" style="width: 100%;">
+                        <colgroup>
+                            <col style="width: 200px; font-size: 1.8rem;" />
+                            <col style="width: 400px;" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th  colspan="2" class="table-heading">Alaska đực đáng yêu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr >
+                                <td>Đánh giá</td>
+                                <td>Đã bán : 0</td>
+                            </tr>
+                            <tr>
+                                <td>Người bán</td>
+                                <td style="color: red;">Chó cảnh đẹp</td>
+                            </tr>
+                            <tr>
+                                <td>Phương thức giao dịch</td>
+                                <td>Trực tiếp, online</td>
+                            </tr>
+                            <tr>
+                                <td>Hình thức thanh toán</td>
+                                <td>Thanh toán khi nhận hàng, chuyển khoản qua tài khoản ngân hàng Zalopay, MoMo</td>
+                            </tr>
+                            <tr>
+                                <td>Giá</td>
+                                <td>xx.xxx.xxx đ</td>
+                            </tr>
+                        </tbody>
+                        <tfoot> 
+                            <tr>
+                                <td>
+                                    <button onclick="showOverlay()" class="pay-now__btn">Mua ngay</button>
+                                </td>
+                                <td>
+                                    <button class="chat-now__btn" onclick="showChat(event)">Gửi tin nhắn cho cửa hàng</button>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <div class="chat-wrap">
+                <div class="chat__title">
+                    <div class="chat__title-shop">
+                        <div class="chat__title-shop-img" style="background-image: url(./assets/img/logo.png);"></div>
+                        <span class="chat__title-shop-name">Chó cảnh đẹp</span>
+                    </div>
+                    <div class="chat__title-close" onclick="hideChat()">
+                        <i class="chat__title-close-icon fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="chat__body"></div>
+                <input type="text" class="chat__input" placeholder="Nhập tin nhắn...">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="./assets/scripts/cart.js"></script>
+    <script>
+        function showChat(event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định
+            var chatWrap = document.querySelector('.chat-wrap');
+            chatWrap.style.display = 'block';
+        }
+
+        function hideChat() {
+            var chatWrap = document.querySelector('.chat-wrap');
+            chatWrap.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

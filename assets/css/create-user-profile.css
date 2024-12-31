@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+}
+
+.header {
+    background-color: #5895F7;
+    color: #000;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+}
+
+.confirm-submit {
+    position: absolute;
+    width: 400px;
+    height: 84px;
+    background-color: #5EA8E9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.confirm-submit__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.confirm-submit__btn-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirm-submit__btn-wrap input {
+    width: 80px;
+    height: 20px;
+    background-color: #D9D9D9;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+/* .confirm-submit__btn-wrap input:hover {
+    opacity: 0.7;
+}
+
+.confirm-submit__btn-wrap input:active {
+    opacity: 1;
+} */
+
+/* Container */
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: parent;
+    height: calc(100vh - 160px);
+    background-color: #1a252f;
+    /* border-radius: 10px; */
+    padding: 20px;
+    background-image: url(../img/anh_nen_profile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.title__wrap {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    display: inline-block;
+    /* position: absolute;
+    top: 10px;
+    left: 20px; */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.avatar {
+    position: absolute;
+    top: 60px;
+    right: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.avatar__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+}
+
+.avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.avatar button {
+    width: 70px;
+    height: 24px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    font-size: 16px;
+    background-color: #D9D9D9;
+    color: #000;
+    cursor: pointer;
+}
+
+.avatar button:hover {
+    opacity: 0.7;
+}
+
+.form {
+    /* position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 60%; */
+    max-width: 400px;
+    font-size: 1.4rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.gender-options {
+    display: flex;
+    gap: 10px;
+}
+
+.form-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.submit-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 630px;
+}
+
+.submit-btn button {
+    padding: 10px 20px;
+    background-color: #D9D9D9;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+.submit-btn button:hover {
+    opacity: 0.7;
+}

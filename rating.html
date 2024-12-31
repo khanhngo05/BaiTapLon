@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopPet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/rating.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.7.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/fonts/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,0,0&icon_names=menu" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Coiny&family=Just+Me+Again+Down+Here&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Begin: Header -->
+    <header class="header">
+        <div class="wrap">
+            <a class="header__logo" href="">
+                <div class="header__logo-img" style="background-image: url(./assets/img/logo.png);"></div>
+            </a>
+            
+            <!-- Chưa đăng nhập -->
+            <!-- <div class="header__action">
+                <a href="./signin.html" class="header__signin">Đăng ký</a>
+                <a href="./login.html" class="header__login">Đăng nhập</a>
+            </div> -->
+
+            <!-- Đã đăng nhập -->
+            <div class="header__navbar">
+
+                <ul class="header__navbar-list">
+
+                    <li class="header__navbar-item">
+                        <div class="header__store">
+                            <a class="header__navbar-icon-link" href="./seller.html">
+                                <i class="header__navbar-icon fi fi-ts-marketplace-store"></i>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="header__navbar-item">
+                        <div class="header__user">
+                            <a class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fi fi-ts-circle-user"></i>
+                            </a>
+                            <ul class="header__user-menu">
+                                <li class="header__user-item">
+                                    <a href="./user-info.html">Thông tin cá nhân</a>
+                                </li>
+                                <li class="header__user-item">
+                                    <a href="./change-profile.html">Chỉnh sửa hồ sơ</a>
+                                </li>
+                                <li class="header__user-item">
+                                    <a href="./purchase-history.html">Lịch sử đơn hàng</a>
+                                </li>
+                                <li class="header__user-item header__user-item--separate">
+                                    <a href="./index.html">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="header__navbar-item">
+                        <div class="header__menu">
+                            <a class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fi fi-tr-bars-sort"></i>
+                            </a>
+                            <ul class="header__menu-list">
+                                <li class="header__menu-item">
+                                    <a href="./create-seller-profile.html">Bắt đầu buôn bán</a>
+                                </li>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="grid wide">
+            <div class="row product-wrapper">
+                <div class="col c-3 product-info__img" style="background-image: url(./assets/img/pet1.png);"></div>
+                <table class="col c-9 product-info__table" style="width: 100%;">
+                    <colgroup>
+                        <col style="width: 200px; font-size: 1.8rem;" />
+                        <col style="width: 400px;" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th  colspan="2" class="table-heading">Alaska đực đáng yêu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Người bán</td>
+                            <td style="color: red;">Chó cảnh đẹp</td>
+                        </tr>
+                        <tr>
+                            <td>Phương thức giao dịch</td>
+                            <td>Trực tiếp, online</td>
+                        </tr>
+                        <tr>
+                            <td>Hình thức thanh toán</td>
+                            <td>Thanh toán khi nhận hàng, chuyển khoản qua tài khoản ngân hàng Zalopay, MoMo</td>
+                        </tr>
+                        <tr>
+                            <td>Giá</td>
+                            <td>xx.xxx.xxx đ</td>
+                        </tr>
+                        <tr>
+                            <td>Chọn đánh giá</td>
+                            <td>
+                                <form class="rating">
+                                    <input type="radio" name="rating" id="star5" value="5" />
+                                    <label for="star5" title="text">5 <i class="rating-star fa-solid fa-star"></i></label>
+                                    <input type="radio" name="rating" id="star4" value="4" />
+                                    <label for="star4" title="text">4 <i class="rating-star fa-solid fa-star"></i></label>
+                                    <input type="radio" name="rating" id="star3" value="3" />
+                                    <label for="star3" title="text">3 <i class="rating-star fa-solid fa-star"></i></label>
+                                    <input type="radio" name="rating" id="star2" value="2" />
+                                    <label for="star2" title="text">2 <i class="rating-star fa-solid fa-star"></i></label>
+                                    <input type="radio" name="rating" id="star1" value="1" />
+                                    <label for="star1" title="text">1 <i class="rating-star fa-solid fa-star"></i></label>
+                                    <input type="submit" value="Xác nhận" class="rating__submit" onclick="returnBackPage(event)"/>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function returnBackPage(event) {
+            event.preventDefault();
+            window.location.href = 'purchase-history.html';
+        }
+    </script>
+</body>
+
+
+</html>

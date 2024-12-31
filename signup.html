@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopPet</title>
+  <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.7.1-web/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/login-base.css">
+  <link rel="stylesheet" href="./assets/css/signup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="app">
+    <a href="./index.html" class="back-home-page">
+      <i class="back-home-page__icon fa-solid fa-arrow-left"></i>
+    </a>
+    <div class="signup-container">
+      <div class="signup__img-wrap">
+        <div class="signup__img" style="background-image: url(./assets/img/meo_beo.jpg);"></div>
+      </div>
+      <div class="signup-wrap">
+        <form action="" method="POST" class="form" id="form-1">
+          <div class="signup-header">
+            <div class="text">Đăng ký</div>
+          </div>
+          <div class="inputs">
+            <div class="input">
+              <input id="email" name="email" type="email" placeholder="Email" />
+              <span class="i-message"></span>
+            </div>
+            <div class="input">
+              <input id="password" name="password" type="password" placeholder="Mật khẩu" />
+              <span class="i-message"></span>
+            </div>
+            <div class="input">
+              <input id="password_confirm" name="password_confirm" type="password" placeholder="Nhập lại mật khẩu" />
+              <span class="i-message"></span>
+            </div>
+          </div>
+          <div class="submit-container">
+            <div class="submit" onclick="register()">Đăng ký</div>
+            <a href="./signin.html" class="have-account"> Đã có tài khoản ?</a>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./assets/scripts/signup.js"></script>
+  <script>
+
+    function register() {
+      // Giả sử đăng ký thành công
+      localStorage.setItem('registrationSuccess', 'true');
+      window.location.href = 'create-user-profile.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Mong muốn của chúng ta
+      Validator({
+        form: '#form-1',
+        formGroupSelector: '.input',
+        errorSelector: '.i-message',
+        rules: [
+          Validator.isEmail('#email'),
+          Validator.minLength('#password', 6),
+          Validator.isRequired('#password_confirm'),
+          Validator.isConfirmed('#password_confirm', function () {
+            return document.querySelector('#form-1 #password').value;
+          }, 'Mật khẩu nhập lại không chính xác')
+        ],
+        onSubmit: function (data) {
+          // Call API
+          console.log(data);
+        }
+      });
+
+
+
+
+
+      // Validator({
+      //   form: '#form-2',
+      //   formGroupSelector: '.form-group',
+      //   errorSelector: '.form-message',
+      //   rules: [
+      //     Validator.isEmail('#email'),
+      //     Validator.minLength('#password', 6),
+      //   ],
+      //   onSubmit: function (data) {
+      //     // Call API
+      //     console.log(data);
+      //   }
+      // });
+    });
+
+  </script>
+</body>
